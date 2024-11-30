@@ -1,0 +1,103 @@
+/* 为日志添加滚动条并且固定高度 */
+#logs {
+    height: 400px;
+    overflow-y: scroll;
+    /* 保留换行符 */
+    white-space: pre-wrap;
+}
+
+/* 全局样式 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+/* 标题样式 */
+h1 {
+    color: #444;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* 按钮样式 */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* 日志区域样式 */
+pre {
+    background-color: #333;
+    color: #f8f8f8;
+    padding: 10px;
+    border-radius: 5px;
+    height: 200px;
+    overflow-y: scroll;
+    border: 1px solid #ddd;
+}
+
+/* 输入框样式 */
+input[type="text"] {
+    padding: 10px;
+    width: 80%;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* 用户信息和登出按钮样式 */
+#logoutButton {
+    background-color: #f44336;
+    margin-top: 10px;
+}
+
+#logoutButton:hover {
+    background-color: #e53935;
+}
+
+p {
+    font-size: 16px;
+    justify-content: center;
+}
+
+h2 {
+    margin-top: 30px;
+    color: #666;
+    justify-content: center;
+}
+
+/* 容器样式 */
+.button-container {
+    display: flex;
+    /* 水平居中 */
+    justify-content: center;
+    /* 垂直居中 */
+    align-items: center;
+    /* 增加顶部间距 */
+    margin-top: 20px;
+    /**/
+    margin-bottom: auto;
+}
+
+.home-link {
+    float: left;
+    font-size: 20px;
+}
+
+.links {
+    float: right;
+    font-size: 20px;
+}

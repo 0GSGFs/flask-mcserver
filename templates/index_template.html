@@ -1,0 +1,64 @@
+<!-- index_template.html -->
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Server Control</title>
+    <!-- 样式表 -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <header class="header">
+        <a class="home-link" href="/">
+            <span class="Minecraft">home</span>
+        </a>
+        <div class="links" style="max-width: 1895px;">
+            <!-- 导航链接 -->
+            <nav class="nav-link can-hide">
+                <div class="nav-item">
+                    <a class="nav-link" href="https://dashboard1.gsgfs.top">
+                        dashboard
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 标题 -->
+    <h1>Minecraft Server Control</h1>
+
+    <!-- 启停 -->
+    <div class="button-container">
+        <button onclick="startServer()">Start Server</button>
+        <button onclick="stopServer()">Stop Server</button>
+    </div>
+
+    <!-- 反馈 -->
+    <p id="status"></p>
+    <div>
+        <h2>Logs</h2>
+        <pre id="logs"></pre>
+    </div>
+
+    <!-- 命令 -->
+    <div>
+        <h2>Command</h2>
+        <input type="text" id="commandInput" placeholder="Enter command">
+        <button onclick="sendCommand()">Send command</button>
+    </div>
+
+    <!-- 账号 -->
+    <div>
+        <p>User: {{ session["user_name"] }}</p>
+        <button id="logoutButton">Logout</button>
+    </div>
+
+    <!-- js函数 -->
+    <script src="scripts.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Server Control</title>
+    <!-- 样式表 -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Minecraft Server Control</h1>
+    <button onclick="startServer()">Start Server</button>
+    <button onclick="stopServer()">Stop Server</button>
+    <p id="status"></p>
+    <div>
+        <h2>Logs</h2>
+        <pre id="logs"></pre>
+    </div>
+    <div>
+        <h2>Command</h2>
+        <input type="text" id="commandInput" placeholder="Enter command">
+        <button onclick="sendCommand()">Send command</button>
+    </div>
+
+    <div>
+        <button id="logoutButton">Logout</button>
+    </div>
+
+    <!-- js函数 -->
+    <script src="scripts.js"></script>
+</body>
+
+</html>
