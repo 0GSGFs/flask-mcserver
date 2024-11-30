@@ -171,7 +171,7 @@ def start_server():
             stderr=subprocess.PIPE,
             stdin=subprocess.PIPE,
             universal_newlines=True,
-            cwd="mc",
+            cwd="<path to your mc server file>",  # 记得改这里
         )
 
         # 记录输出的函数
