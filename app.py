@@ -40,7 +40,7 @@ Session(app)
 
 # GitHub OAuth
 white_list = [
-    "0GSGFs",
+    # 填入Github的用户名
 ]  # 白名单
 oauth = OAuth(app)
 github = OAuth(app).register(
