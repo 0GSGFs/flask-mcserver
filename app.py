@@ -79,7 +79,7 @@ def index():
     if user is None:
         login_url = url_for("login", _external=True)
         return f'<p><a href="{login_url}">Login</p>'
-    # return send_from_directory(".", "index.html")
+    # return send_from_directory("./templates", "index.html")
     return render_template(
         "index_template.html",
     )
@@ -136,13 +136,13 @@ def callback():
 @app.route("/styles.css", methods=["GET"])
 @login_required
 def styles():
-    return send_from_directory(".", "styles.css")
+    return send_from_directory("./templates", "styles.css")
 
 
 @app.route("/scripts.js", methods=["GET"])
 @login_required
 def scripts():
-    return send_from_directory(".", "scripts.js")
+    return send_from_directory("./templates", "scripts.js")
 
 
 @app.route("/start", methods=["POST"])  # 路由装饰器，调用 app.route 方法定义路由
@@ -171,7 +171,7 @@ def start_server():
             stderr=subprocess.PIPE,
             stdin=subprocess.PIPE,
             universal_newlines=True,
-            cwd="<path to your mc server file>",  # 记得改这里
+            cwd="./mc",
         )
 
         # 记录输出的函数
